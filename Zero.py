@@ -14,7 +14,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    Userowner = bot.get_user(702050977645068310) # Your id discord
+    Userowner = bot.get_user() # Your id discord
     if message.content.startswith('https://discord.gift/'):
         code = re.search("https://discord.gift/(.*)", message.content).group(1)
         if len(code) != 16:
